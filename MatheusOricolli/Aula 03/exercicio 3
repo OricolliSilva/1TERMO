@@ -1,0 +1,7 @@
+#Exercicio 3
+#Calcular o valor da conta e gorjeta do garçom
+
+print("Aqui esta o total da sua conta: \n")
+c1 = float(input("Digite o valor da conta: \n"))
+print("Essa é a gorjeta do garçom: \n", c1 * 10 /100) 
+print("O valor total da sua conta é: \n", c1 + (c1 * 10 /100))

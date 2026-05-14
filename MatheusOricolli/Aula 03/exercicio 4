@@ -1,0 +1,7 @@
+#Exercicio
+#Faça um sistema que descubra o sucessor e antecessor de um numero
+
+print("Clcular o antecessor e sucessor")
+n1 = float(input("Digite um numero: \n"))
+print(n1 - 1)
+print(n1 + 1)

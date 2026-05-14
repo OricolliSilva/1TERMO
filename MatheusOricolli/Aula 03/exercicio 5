@@ -1,0 +1,7 @@
+#Exercicio 5 
+#Criar um algoritimo para calcular a venda de livros e que toda venda apresente um desconto fixo de 5%
+
+print("Escolha o seu livro com desconto de 5%")
+n1 = float(input("Digite o valor do livro: \n"))
+print("Valor do desconto do livro: \n", n1 *5 /100)
+print("Valor total junto com o desconto: \n", n1 - (n1 *5 /100))
