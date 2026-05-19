@@ -13,7 +13,7 @@ def subindo(andar_desejado, andar_agora):
 
     for i in range(andares_andados):
         passando += 1
-        print(f"----- Andar {passando}")
+        print(f"Indo Para o Andar {passando}")
         sleep(1)
 
     print(f"Você chegou ao andar {andar_desejado}")
@@ -29,39 +29,48 @@ def descendo(andar_desejado, andar_agora):
 
     for i in range(andares_andados):
         passando -= 1
-        print(f"----- Andar {passando}")
+        print(f"..... Andar {passando}")
         sleep(1)
 
     print(f"Você chegou ao andar {andar_desejado}")
     return andar_desejado  
 
-
 def contando_pessoas(pessoas_atuais):
-    saiu_pessoas = int(input("Insira a quantidade de pessoas que saíram: "))
-    entrou_pessoas = int(input("Insira a quantidade de pessoas que entraram: "))
+    
+    while True:
+        saiu_pessoas = int(input("Insira a quantidade de pessoas que saíram: "))
+        entrou_pessoas = int(input("Insira a quantidade de pessoas que entraram: "))
+        if saiu_pessoas > pessoas_atuais:
 
-    if saiu_pessoas > 6:
-        print(
-            "Insira um valor válido, o elevador não pode conter mais de 5 pessoas!"
-        )
-        return pessoas_atuais
+            print(f"Erro, só existem {pessoas_atuais} pessoa(s) dentro do elevador!!!")
+            print("Reiniciando sistema")
+            
+            for _ in range(5):
+                print(".")
+                sleep(0.5) 
+            
+            print("===================\n")
+            continue 
 
-    elif entrou_pessoas < 0 or saiu_pessoas < 0:
-        print(
-            "Insira um valor válido, os números não podem ser negativos!"
-        )
-        return pessoas_atuais
+        elif entrou_pessoas < 0 or saiu_pessoas < 0:
+            print("Insira um valor válido, os números não podem ser negativos!")
+            print("Reiniciando sistema")
+            
+            for _ in range(5):
+                print(".")
+                sleep(0.5)
+                
+            print("===================\n")
+            continue
 
-    else:
-        total = pessoas_atuais - saiu_pessoas + entrou_pessoas
+        else:
+            total = pessoas_atuais - saiu_pessoas + entrou_pessoas
 
-        if total > 5:
-            pessoas_a_mais = total - 5
-            print(
-                f"Capacidade máxima excedida, será necessária a saída de {pessoas_a_mais} pessoas."
-            )
+            if total > 5:
+                pessoas_a_mais = total - 5
+                print(f"Capacidade máxima excedida, será necessária a saída de {pessoas_a_mais} pessoas.")
 
-        return total  # Devolve o novo total de pessoas
+            return total
 
 print("Você Está Entrando no Elevador!")
 quantidade_pessoas = int(input("Insira a quantidade de pessoas no elevador: "))
