@@ -1,7 +1,7 @@
-#Explicação de def: A palavra-chave "def" é usada para definir uma função em Python.
+# Explicação de def: A palavra-chave "def" é usada para definir uma função em Python.
 # #Uma função é um bloco de código reutilizavél que realiza uma tarefa específica.
-#Return: A palavra-chave "return" é usada para finalizar a execução 
-#de uma função e retornar um valor para o local onde a função foi chamada.
+# Return: A palavra-chave "return" é usada para finalizar a execução 
+# de uma função e retornar um valor para o local onde a função foi chamada.
 # O valor rertornado pode ser usado posteriormente no código.
 
 # def nome():
@@ -21,12 +21,12 @@
 # nome()
 # valores()
 
-## Conceitos Chave
-#def: Indica o início da definição da função
-#Nome: Identifica a função recebe (opcional).
-#Parâmetros: Dados que a função recebe (opcional).
+# # Conceitos Chave
+# def: Indica o início da definição da função
+# Nome: Identifica a função recebe (opcional).
+# Parâmetros: Dados que a função recebe (opcional).
 # return: Envia o resultado de volta para quem chamou a função (opcional).
-def calcular_dobro(numero):
-    return numero * 2 
+# def calcular_dobro(numero):
+    # return numero * 2 
 #Como usar: resultado = calcular_dobro(5)
-print(calcular_dobro(67)) 
+# print(calcular_dobro(67)) 

@@ -48,3 +48,4 @@ print(f"{'-'*25:^60}")
 print(f"Total de funcionários cadastrados: {total_cadastrados:>6}")
 print(f"Funcionários com treinamentos em dia: {total_em_dia:>3}")
 print("="*60)
+
