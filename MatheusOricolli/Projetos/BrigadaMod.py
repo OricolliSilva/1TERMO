@@ -73,36 +73,36 @@ def encerrar_sessao():
 app = tk.Tk()
 app.title("Sistema de Controle SESMT")
 app.geometry("500x520") 
+app.configure(bg="#FFD1DC")
 
-
-lbl_titulo = tk.Label(app, text="Controle da SESMT\nInforme os dados abaixo:", font=("Arial", 12, "bold"))
+lbl_titulo = tk.Label(app, text="Controle da SESMT\nInforme os dados abaixo:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_titulo.pack(pady=10)
 
-lbl_nome = tk.Label(app, text="Nome do Funcionário:")
+lbl_nome = tk.Label(app, text="Nome do Funcionário:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_nome.pack(pady=2)
 campo_nome = tk.Entry(app, font=("Arial", 11), width=40)
 campo_nome.pack(pady=2)
 
 
-lbl_setor = tk.Label(app, text="Setor (Elétrica / Trabalho em Altura):")
+lbl_setor = tk.Label(app, text="Setor (Elétrica / Trabalho em Altura):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_setor.pack(pady=2)
 campo_setor = tk.Entry(app, font=("Arial", 11), width=40)
 campo_setor.pack(pady=2)
 
 
-lbl_nr10 = tk.Label(app, text="Status NR-10 (OK/Pendente):")
+lbl_nr10 = tk.Label(app, text="Status NR-10 (OK/Pendente):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_nr10.pack(pady=2)
 campo_nr10 = tk.Entry(app, font=("Arial", 11), width=20)
 campo_nr10.pack(pady=2)
 
 
-lbl_nr35 = tk.Label(app, text="Status NR-35 (OK/Pendente):")
+lbl_nr35 = tk.Label(app, text="Status NR-35 (OK/Pendente):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_nr35.pack(pady=2)
 campo_nr35 = tk.Entry(app, font=("Arial", 11), width=20)
 campo_nr35.pack(pady=2)
 
 
-lbl_ano_brigada = tk.Label(app, text="Ano do último treinamento da Brigada:")
+lbl_ano_brigada = tk.Label(app, text="Ano do último treinamento da Brigada:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_ano_brigada.pack(pady=2)
 campo_ano_brigada = tk.Entry(app, font=("Arial", 11), width=20)
 campo_ano_brigada.pack(pady=2)
