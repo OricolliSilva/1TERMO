@@ -67,7 +67,22 @@ def encerrar_sessao():
 
     messagebox.showinfo("Balanço Geral - SESMT", relatorio_final)
   
+ 
     app.destroy()
+def ir_para_setor(event):
+    campo_setor.focus()
+
+def ir_para_nr10(event):
+    campo_nr10.focus()
+
+def ir_para_nr35(event):
+    campo_nr35.focus()
+
+def ir_para_ano(event):
+    campo_ano_brigada.focus()
+
+def disparar_cadastro(event):
+    processar_cadastro()
 
 
 app = tk.Tk()
@@ -75,45 +90,50 @@ app.title("Sistema de Controle SESMT")
 app.geometry("500x520") 
 app.configure(bg="#FFD1DC")
 
-lbl_titulo = tk.Label(app, text="Controle da SESMT\nInforme os dados abaixo:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
+lbl_titulo = tk.Label(app, text="❤️Controle da SESMT     ❤️\nInforme os dados abaixo:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_titulo.pack(pady=10)
 
-lbl_nome = tk.Label(app, text="Nome do Funcionário:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
+lbl_nome = tk.Label(app, text="❤️Nome do Funcionário:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_nome.pack(pady=2)
 campo_nome = tk.Entry(app, font=("Arial", 11), width=40)
 campo_nome.pack(pady=2)
 
 
-lbl_setor = tk.Label(app, text="Setor (Elétrica / Trabalho em Altura):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
+lbl_setor = tk.Label(app, text="❤️Setor (Elétrica / Trabalho em Altura):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_setor.pack(pady=2)
 campo_setor = tk.Entry(app, font=("Arial", 11), width=40)
 campo_setor.pack(pady=2)
 
 
-lbl_nr10 = tk.Label(app, text="Status NR-10 (OK/Pendente):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
+lbl_nr10 = tk.Label(app, text="❤️Status NR-10 (OK/Pendente):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_nr10.pack(pady=2)
 campo_nr10 = tk.Entry(app, font=("Arial", 11), width=20)
 campo_nr10.pack(pady=2)
 
 
-lbl_nr35 = tk.Label(app, text="Status NR-35 (OK/Pendente):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
+lbl_nr35 = tk.Label(app, text="❤️Status NR-35 (OK/Pendente):", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_nr35.pack(pady=2)
 campo_nr35 = tk.Entry(app, font=("Arial", 11), width=20)
 campo_nr35.pack(pady=2)
 
 
-lbl_ano_brigada = tk.Label(app, text="Ano do último treinamento da Brigada:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
+lbl_ano_brigada = tk.Label(app, text="❤️Ano do último treinamento da Brigada:", font=("Arial", 12, "bold"), bg="#FFD1DC", fg="#4A0E17")
 lbl_ano_brigada.pack(pady=2)
 campo_ano_brigada = tk.Entry(app, font=("Arial", 11), width=20)
 campo_ano_brigada.pack(pady=2)
 
 
-btn_enviar = tk.Button(app, text="Cadastrar Funcionário", font=("Arial", 11, "bold"), bg="#4CAF50", fg="white", command=processar_cadastro)
+btn_enviar = tk.Button(app, text="Cadastrar Funcionário", font=("Arial", 11, "bold"), bg="#FFC0CB", fg="#4A0E17", command=processar_cadastro)
 btn_enviar.pack(pady=15)
 
 
-btn_sair = tk.Button(app, text="Sair", font=("Arial", 11, "bold"), bg="#F44336", fg="white", command=encerrar_sessao)
+btn_sair = tk.Button(app, text="Sair", font=("Arial", 11, "bold"), bg="#FFC0CB", fg="#4A0E17", command=encerrar_sessao)
 btn_sair.pack(pady=5)
 
+campo_nome.bind("<Return>", ir_para_setor)
+campo_setor.bind("<Return>", ir_para_nr10)
+campo_nr10.bind("<Return>", ir_para_nr35)
+campo_nr35.bind("<Return>", ir_para_ano)
+campo_ano_brigada.bind("<Return>", disparar_cadastro)
 
 app.mainloop()
