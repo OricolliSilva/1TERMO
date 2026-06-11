@@ -42,7 +42,7 @@ ent_curso_usuario.grid(row=14, column=0, pady=10, padx=35)
 cmb_nome_escola = ttk.Combobox(janela, values=["SESI408", "SESI05"], font=("Arial", 14) , state="readonly")
 cmb_nome_escola.grid(row=16, column=0, pady=10, padx=35)
 
-# - Botões de 
+# - Botões de pressionar
 btn_realizar_cadastro = tk.Button(janela, text="Cadastrar", font=("Arial", 14), fg="white", bg="blue", command=cadastrar_usuario)
 btn_realizar_cadastro.grid(row=17, column=0, pady=10, padx=80 )
 btn_fechar_janela = tk.Button(janela, text="Fechar", font=("Arial", 14), fg="white", bg="blue", command=janela.destroy)
